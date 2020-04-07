@@ -32,8 +32,9 @@ import calendar
 from datetime import datetime
 
 userType = input("Please type something: ")
-userType2 = input("Please type something here: ")
+# userType2 = input("Please type something here: ")
 
+GeneralUserInput = userType.split(" ")
 # now = datetime.now()
 # print(now.strftime("%Y-%m-%d"))
 # print(now)
@@ -43,6 +44,6 @@ userType2 = input("Please type something here: ")
 
 c = calendar.TextCalendar(calendar.SUNDAY)
 
-stuff = c.formatmonth(int(userType), int(userType2))
+stuff = c.formatmonth(int(GeneralUserInput[0]), int(GeneralUserInput[1]))
 
 print(stuff)
