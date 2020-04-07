@@ -37,7 +37,7 @@ userType = input("Please type something: ")
 GeneralUserInput = userType.split(" ")
 
 # print(int(GeneralUserInput[2]), int(GeneralUserInput[3]))
-print(GeneralUserInput)
+# print(GeneralUserInput)
 
 theyear = GeneralUserInput[2]
 themonth = GeneralUserInput[3]
@@ -49,7 +49,7 @@ themonth = GeneralUserInput[3]
 
 # This prints the calendar of the specified year and month.
 
-c = calendar.TextCalendar(calendar.SUNDAY)
+c = calendar.TextCalendar(calendar.MONDAY)
 
 stuff = c.formatmonth(int(themonth), int(theyear))
 
