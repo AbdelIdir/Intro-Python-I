@@ -42,9 +42,6 @@ x = input("Enter comma-separated numbers: ").split(',')
 
 
 # function that filters vowels
-y = []
-
-
 def filterEven(data):
 
     if(int(data) % 2 == 0):
@@ -54,8 +51,7 @@ def filterEven(data):
 
 
 filteredNumbers = filter(filterEven, x)
-
 print('The even numbers are:')
-for rightNumber in filteredNumbers:
-    y.append(rightNumber)
+y = [rightNumber for rightNumber in filteredNumbers]
 print(y)
+
