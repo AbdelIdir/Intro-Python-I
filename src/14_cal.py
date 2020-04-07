@@ -33,29 +33,22 @@ import sys
 import calendar
 from datetime import datetime
 
-userType = input("Please type something: ")
-userType = ""
-# userType2 = input("Please type something here: ")
+# userType = input("Please type something: ")
+# userType = ""  for when user inputs nothing
 
 # GeneralUserInput = userType.split(" ")
 
 # print(int(GeneralUserInput[2]), int(GeneralUserInput[3]))
 # print(GeneralUserInput)
 
-# theyear = GeneralUserInput[2]
-# themonth = GeneralUserInput[3]
+# themonth = GeneralUserInput[2]
+# themonth = sys.argv[1]
 
 now = datetime.now()
 # print(now.strftime("%m"))
 
 currentMonth = now.strftime("%m")
 currentYear = now.strftime("%Y")
-
-
-# print(now)
-# print(userType)
-
-# This prints the calendar of the specified year and month.
 
 # - If the user specifies two arguments, assume they passed in
 # both the month and the year. Render the calendar for that   <<<< DONE
@@ -66,16 +59,20 @@ c = calendar.TextCalendar(calendar.MONDAY)
 
 stuff2 = c.formatmonth(int(currentYear), int(currentMonth))
 
-print(stuff2)
-# print(stuff if len(GeneralUserInput) > 3 else now)
-
-# - If the user doesn't specify any input, your program should
-# print the calendar for the current month. The 'datetime'
-# module may be helpful for this.
-
-
-# print(stuff if len(GeneralUserInput) > 4 else stuff2)
-
-
 # - If the user specifies one argument, assume they passed in a
 #   month and render the calendar for that month of the current year.   <<<<<
+
+
+def calendarPro(year= sys.argv[1:2][0] , month=sys.argv[2:3][0]):
+
+    stuff3 = c.formatmonth(int(month), int(year))
+    print(stuff3)
+
+# print(sys.argv[1:2])
+# ['12']
+
+
+calendarPro(currentYear, currentMonth if len(sys.argv) < 2 else False)
+
+
+# print(sys.argv[1:2][0], sys.argv[2:3])
