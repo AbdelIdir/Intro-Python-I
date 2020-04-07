@@ -30,3 +30,19 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+userType = input("Please type something: ")
+userType2 = input("Please type something here: ")
+
+# now = datetime.now()
+# print(now.strftime("%Y-%m-%d"))
+# print(now)
+# print(userType)
+
+# This prints the calendar of the specified year and month.
+
+c = calendar.TextCalendar(calendar.SUNDAY)
+
+stuff = c.formatmonth(int(userType), int(userType2))
+
+print(stuff)

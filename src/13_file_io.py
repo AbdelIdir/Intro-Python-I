@@ -20,9 +20,10 @@ foo.close()
 # then close the file. Open up "bar.txt" and inspect it to make
 # sure that it contains what you expect it to contain
 
+
+# YOUR CODE HERE
+
 bar = open('bar.txt', 'w+')
 for i in range(3):
     bar.write("This is line %d\r\n" % (i + 1))
 bar.close()
-
-# YOUR CODE HERE
