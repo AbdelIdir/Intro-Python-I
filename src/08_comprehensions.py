@@ -41,17 +41,19 @@ x = input("Enter comma-separated numbers: ").split(',')
 # What do you need between the square brackets to make it work?
 
 
-# function that filters vowels
-def filterEven(data):
+# function that filters 
+# def filterEven(data):
 
-    if(int(data) % 2 == 0):
-        return True
-    else:
-        return False
+#     if(int(data) % 2 == 0):
+#         return True
+#     else:
+#         return False
 
 
-filteredNumbers = filter(filterEven, x)
-print('The even numbers are:')
-y = [rightNumber for rightNumber in filteredNumbers]
-print(y)
+# filteredNumbers = filter(filterEven, x)
+# print('The even numbers are:')
+# y = [rightNumber for rightNumber in filteredNumbers]
+# print(y)
 
+
+y = [n for n in x if int(n) % 2 == 0]
